@@ -1,1 +1,1 @@
-# HOST (Hupeyaszih OS Threshold)
+# HOST (Hupeyaszih OS Technology)
