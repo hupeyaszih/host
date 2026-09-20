@@ -1,6 +1,6 @@
 [org 0x7c00]
 
-; Stage 1 aims to read stage 2 and jump to it
+; Stage 1 aims to prepare stack, read stage 2 and jump to it
 ;; constants
 SECTORS_TO_READ equ 1
 CYLINDER        equ 0
@@ -12,6 +12,13 @@ BOOT_DRIVE db 0
 ;
 
 cli
+
+; prepare stack
+mov ax, 0x9000
+mov ss, ax
+mov sp, 0xFFFF
+;
+
 mov [BOOT_DRIVE], dl
 
 ; reset disk
