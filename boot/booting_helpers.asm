@@ -1,5 +1,6 @@
 ;ERR CODES
 ERR_DEFAULT equ '1'
+ERR_A20     equ '2'
 ;
 
 %macro print 1

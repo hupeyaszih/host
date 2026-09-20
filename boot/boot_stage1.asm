@@ -1,3 +1,5 @@
+bits 16
+
 [org 0x7c00]
 
 ; Stage 1 aims to prepare stack, read stage 2 and jump to it

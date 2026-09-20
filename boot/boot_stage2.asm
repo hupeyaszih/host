@@ -3,15 +3,25 @@
 
 %include "boot/booting_helpers.asm"
 ; Start of code
-
 jmp main
 
-some_func:
+enable_A20:
+    mov ax, 0x2401
+    int 0x15
+    jc .A20_err
+    ret
+
+    .A20_err :
+        print_err ERR_A20
+        ret
+
+prepare_GDT:
     print_err ERR_DEFAULT
     ret
 
 main:
-    call some_func
+    call enable_A20
+    call prepare_GDT
     jmp $
 
 ; End of code
