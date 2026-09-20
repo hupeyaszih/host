@@ -9,7 +9,9 @@ LDFLAGS =
 BUILD_DIRECTORY = build
 
 SOURCES = $(wildcard boot/*.asm)
-OBJECTS = $(addprefix $(BUILD_DIRECTORY)/, $(SOURCES:.asm=.bin))
+#SOURCES = boot/boot_stage1.asm boot/boot_stage2.asm
+MAIN_SOURCES = boot/boot_stage1.asm boot/boot_stage2.asm
+OBJECTS = $(addprefix $(BUILD_DIRECTORY)/, $(MAIN_SOURCES:.asm=.bin))
 
 $(TARGET): $(OBJECTS)
 	cat $^ > $(TARGET)

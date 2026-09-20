@@ -1,28 +1,34 @@
 [org 0x7e00]
 ; stage 2 aims to enable long mode, prepare other things and jump to kmain
 
-%include "boot/booting_helpers.asm"
-; Start of code
 jmp main
 
+%include "boot/booting_helpers.asm"
+%include "boot/gdt.asm"
+[bits 16]
+; Start of code
+
 enable_A20:
+    in al, 0x92
+    test al, 2
+    jnz .done
+
     mov ax, 0x2401
     int 0x15
-    jc .A20_err
-    ret
+    jnc .done
 
-    .A20_err :
-        print_err ERR_A20
+    in al, 0x92
+    or al, 2
+    out 0x92, al
+    jmp .done
+
+    print_err TASK_TURN_ON_A20
+    .done :
         ret
-
-prepare_GDT:
-    print_err ERR_DEFAULT
-    ret
 
 main:
     call enable_A20
-    call prepare_GDT
-    jmp $
+    jmp prepare_GDT
 
 ; End of code
 times 512-($-$$) db 0

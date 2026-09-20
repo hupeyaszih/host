@@ -1,6 +1,11 @@
-;ERR CODES
-ERR_DEFAULT equ '1'
-ERR_A20     equ '2'
+%ifndef BOOTING_HELPERS_ASM
+%define BOOTING_HELPERS_ASM
+
+;TASK CODES
+ALL_TASKS            equ '0'
+TASK_DEFAULT         equ '1'
+TASK_TURN_ON_A20     equ '2'
+TASK_PREP_GDT        equ '3'
 ;
 
 %macro print 1
@@ -18,3 +23,14 @@ print ' '
 print %1
 print ' '
 %endmacro
+
+%macro print_ok 1
+print 'o'
+print 'k'
+print ':'
+print ' '
+print %1
+print ' '
+%endmacro
+
+%endif
