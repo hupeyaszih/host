@@ -1,5 +1,5 @@
 [org 0x7e00]
-; stage 2 aims to enable long mode, prepare other things and jump to kmain
+; stage 2 aims to enable A20 line and jump to prepare_GDT
 
 jmp main
 
@@ -31,4 +31,4 @@ main:
     jmp prepare_GDT
 
 ; End of code
-times 512-($-$$) db 0
+times 1024-($-$$) db 0

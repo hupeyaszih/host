@@ -24,7 +24,7 @@ build:
 	mkdir -p $(BUILD_DIRECTORY)
 
 run: $(TARGET)
-	qemu-system-i386 -drive format=raw,file=$(TARGET) -display sdl
+	qemu-system-x86_64 -drive format=raw,file=$(TARGET) -display sdl
 
 clean:
 	rm -rf $(BUILD_DIRECTORY)

@@ -1,6 +1,8 @@
 %ifndef PREPARE_GDT_ASM
 %define PREPARE_GDT_ASM
 
+; PREPARE_GDT_ASM aims to prepare gdt (so it called PREPARE_GDT_ASM), and then jump to enable_long_mode
+
 [bits 16]
 prepare_GDT:
     cli 
@@ -20,6 +22,7 @@ prepare_GDT:
 [bits 32]
 
 %include "boot/protected_mode_helpers.asm"
+%include "boot/long_mode.asm"
 
 init_protected_mode:
     mov ax, 0x10
@@ -31,14 +34,7 @@ init_protected_mode:
 
     mov esp, 0x90000
 
-    fill_screen 0x0720
-
-    print_char 'H', VGA_HEIGHT/2 - 1, VGA_WIDTH/2 - 2, 0x0A
-    print_char 'O', VGA_HEIGHT/2 - 1, VGA_WIDTH/2 - 1, 0x0A
-    print_char 'S', VGA_HEIGHT/2 - 1, VGA_WIDTH/2 - 0, 0x0A
-    print_char 'T', VGA_HEIGHT/2 - 1, VGA_WIDTH/2 + 1, 0x0A
-
-    jmp $
+    jmp enable_long_mode
 
 
 gdt_start:
