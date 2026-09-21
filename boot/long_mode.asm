@@ -144,7 +144,11 @@ enable_long_mode:
 
     print_char '3', 0, 0, 0x0B ; step 4 is successful
 
-    jmp $
+    lgdt [long_mode_gdt]
+
+    print_char '4', 0, 0, 0x0B ; step 4 is successful
+
+    jmp 0x08:long_mode_start
 
 no_cpuid_instruction_support:
     jmp $
@@ -153,6 +157,53 @@ no_long_mode_support:
     jmp $
 
 
+
+
+long_mode_gdt_start:
+    dq 0x0000000000000000 ; NULL DESCRIPTOR
+
+    ; Kernel Code Segment
+    dw 0xFFFF ; Limit (LOW)
+    dw 0x0000 ; BASE (LOW)
+    db 0x00   ; BASE (MID)
+    db 0b10011010 ; ACCESS BYTE           ;   [Is Active (1 bit) | Privelege Level (2 bit) | Descriptor Type (1 bit) | Executable (1 bit) | DC (1 bit) | RW (1 bit) | Accessed (1 bit)]
+    db 0b11101111 ; Flags and Limit (HIGH);   [Granularity (1 bit) | DB (1 bit) | Long Mode (1 bit)]
+    db 0b00   ; BASE (HIGH)
+
+    ; Kernel Data Segment
+    dw 0xFFFF ; Limit (LOW)
+    dw 0x0000 ; BASE (LOW)
+    db 0x00   ; BASE (MID)
+    db 0b10010010 ; ACCESS BYTE           ;   [Is Active (1 bit) | Privelege Level (2 bit) | Descriptor Type (1 bit) | Executable (1 bit) | DC (1 bit) | RW (1 bit) | Accessed (1 bit)]
+    db 0b11101111 ; Flags and Limit (HIGH);   [Granularity (1 bit) | DB (1 bit) | Long Mode (1 bit)]
+    db 0b00   ; BASE (HIGH)
+long_mode_gdt_end:
+
+long_mode_gdt:
+    dw long_mode_gdt_end - long_mode_gdt_start - 1
+    dd long_mode_gdt_start
+
+
+
 ;Note: Some implementation details, structures, and initialization sequences are based on tutorials and guides provided by the OSDev Wiki
+
+[bits 64]
+long_mode_start:
+    xor ax, ax
+    mov ds, ax
+    mov es, ax
+    mov fs, ax
+    mov gs, ax
+    mov ss, ax
+
+    mov rsp, 0x90000
+
+    mov rax, 0x024C024C
+    mov [0xB8000], rax
+
+    ; I'll jump here to the kernel_main, before that I have to set up linker.ld, which is I'm current searching
+
+    hlt
+    jmp $
 
 %endif
