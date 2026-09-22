@@ -4,7 +4,7 @@ bits 16
 
 ; Stage 1 aims to prepare stack, read stage 2 and jump to it
 ;; constants
-SECTORS_TO_READ equ 2
+SECTORS_TO_READ equ 3
 CYLINDER        equ 0
 HEAD            equ 0
 SECTOR          equ 2

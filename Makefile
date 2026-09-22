@@ -4,8 +4,9 @@ TARGET = $(BUILD_DIR)/host.bin
 ASM_SOURCES = boot/boot_stage1.asm \
 			  boot/boot_stage2.asm
 
-C_SOURCES = kernel/kernel.c \
-			kernel/vga.c
+C_SOURCES = src/kernel/kernel.c \
+			src/kernel/vga.c    \
+			src/arch/x86_64/x86_64_cpu.c
 
 COMPILER  = gcc
 ASSEMBLER = nasm
