@@ -1,30 +1,57 @@
-TARGET = build/host
+BUILD_DIR = build
+TARGET = $(BUILD_DIR)/host.bin
 
-ASM = nasm
-ASFLAGS = -f bin
+ASM_SOURCES = boot/boot_stage1.asm \
+			  boot/boot_stage2.asm
 
-LD = ld
-LDFLAGS =
+C_SOURCES = kernel/kernel.c \
+			kernel/vga.c
 
-BUILD_DIRECTORY = build
+COMPILER  = gcc
+ASSEMBLER = nasm
+LINKER = ld
 
-SOURCES = $(wildcard boot/*.asm)
-#SOURCES = boot/boot_stage1.asm boot/boot_stage2.asm
-MAIN_SOURCES = boot/boot_stage1.asm boot/boot_stage2.asm
-OBJECTS = $(addprefix $(BUILD_DIRECTORY)/, $(MAIN_SOURCES:.asm=.bin))
 
-$(TARGET): $(OBJECTS)
-	cat $^ > $(TARGET)
+CFLAGS = -m64 -ffreestanding -mno-red-zone -mno-sse -mno-mmx -fno-pie -fno-stack-protector -fno-builtin -Wall -Wextra -Iinclude -c
+ASFLAGS = -f elf64
+ASFLAGS_BIN = -f bin
+LDFLAGS = -n -T linker.ld -nostdlib
 
-$(BUILD_DIRECTORY)/%.bin: %.asm | $(BUILD_DIRECTORY)
-	mkdir -p $(dir $@)
-	$(ASM) $(ASFLAGS) $< -o $@
+OBJECTS_C = $(C_SOURCES:%.c=$(BUILD_DIR)/%.o)
+OBJECTS_ASM = $(ASM_SOURCES:%.asm=$(BUILD_DIR)/%.o)
 
-build:
-	mkdir -p $(BUILD_DIRECTORY)
+BOOT1_BIN = $(BUILD_DIR)/boot_stage1.bin
+BOOT2_BIN = $(BUILD_DIR)/boot_stage2.bin
+KERNEL_ELF = $(BUILD_DIR)/kernel.elf
+KERNEL_BIN = $(BUILD_DIR)/kernel.bin
+
+all: $(TARGET)
+
+$(TARGET): $(BOOT1_BIN) $(BOOT2_BIN) $(KERNEL_BIN)
+	cat $(BOOT1_BIN) $(BOOT2_BIN) $(KERNEL_BIN) > $(TARGET)
+	@echo "Compiling process is finished! HOST IS COMPILED!"
+
+$(BOOT1_BIN): boot/boot_stage1.asm | $(BUILD_DIR)
+	$(ASSEMBLER) $(ASFLAGS_BIN) $< -o $@
+
+$(BOOT2_BIN): boot/boot_stage2.asm | $(BUILD_DIR)
+	$(ASSEMBLER) $(ASFLAGS_BIN) $< -o $@
+
+$(BUILD_DIR)/%.o: %.c | $(BUILD_DIR)
+	@mkdir -p $(dir $@)
+	$(COMPILER) $(CFLAGS) $< -o $@
+
+$(KERNEL_ELF): $(OBJECTS_C) linker.ld
+	$(LINKER) $(LDFLAGS) $(OBJECTS_C) -o $@
+
+$(KERNEL_BIN): $(KERNEL_ELF)
+	objcopy -O binary $< $@
+
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
 
 run: $(TARGET)
 	qemu-system-x86_64 -drive format=raw,file=$(TARGET) -display sdl
 
 clean:
-	rm -rf $(BUILD_DIRECTORY)
+	rm -rf $(BUILD_DIR)

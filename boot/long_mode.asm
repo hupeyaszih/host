@@ -130,23 +130,23 @@ enable_long_mode:
     jz no_long_mode_support
     ; I have to implement 32-bit support in the future. But now, it only supports x86-64 CPUs
 
-    print_char '0', 0, 0, 0x0B ; step 1 is successful
+    ;print_char '0', 0, 0, 0x0B ; step 1 is successful
 
     call disable_paging_for_32
 
-    print_char '1', 0, 0, 0x0B ; step 2 is successful
+    ;print_char '1', 0, 0, 0x0B ; step 2 is successful
 
     call enable_paging_for_64
 
-    print_char '2', 0, 0, 0x0B ; step 3 is successful
+    ;print_char '2', 0, 0, 0x0B ; step 3 is successful
 
     call switch_to_compatibility_mode
 
-    print_char '3', 0, 0, 0x0B ; step 4 is successful
+    ;print_char '3', 0, 0, 0x0B ; step 4 is successful
 
     lgdt [long_mode_gdt]
 
-    print_char '4', 0, 0, 0x0B ; step 4 is successful
+    ;print_char '4', 0, 0, 0x0B ; step 4 is successful
 
     jmp 0x08:long_mode_start
 
@@ -198,10 +198,7 @@ long_mode_start:
 
     mov rsp, 0x90000
 
-    mov rax, 0x024C024C
-    mov [0xB8000], rax
-
-    ; I'll jump here to the kernel_main, before that I have to set up linker.ld, which is I'm current searching
+    call 0x00008000
 
     hlt
     jmp $

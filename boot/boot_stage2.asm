@@ -31,4 +31,4 @@ main:
     jmp prepare_GDT
 
 ; End of code
-times 1024-($-$$) db 0
+times 512-($-$$) db 0
