@@ -50,12 +50,49 @@ jmp 0x7e00
 
 ; if an error occurs, this label is where we should jump
 .err:
+    push ax
+
     mov ah, 0xE
-    mov al, '1'
+    mov al, 'E'
     int 0x10
+
+    pop ax
+    mov al, ah
+
+    call print_hex
 
     cli
     hlt
+
+print_hex:
+    push ax
+    push bx
+    push cx
+    push dx
+
+    mov cx, 2
+.loop:
+    rol al, 4
+    mov bl, al
+    and bl, 0x0F
+    cmp bl, 10
+    jl .num
+    add bl, 7
+.num:
+    add bl, '0'
+
+    mov ah, 0x0E
+    mov al, bl
+    int 0x10
+
+    dec cx
+    jnz .loop
+
+    pop dx
+    pop cx
+    pop bx
+    pop ax
+    ret
 
 times 510-($-$$) db 0
 dw 0xaa55
