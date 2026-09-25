@@ -15,6 +15,10 @@ BOOT_DRIVE db 0
 
 cli
 
+xor ax, ax
+mov es, ax
+mov ds, ax
+
 ; prepare stack
 mov ax, 0x9000
 mov ss, ax
@@ -29,17 +33,9 @@ mov dl, [BOOT_DRIVE]
 int 0x13
 
 ; read stage 2 from disk
-mov ah, 0x2
-mov al, SECTORS_TO_READ
-mov ch, CYLINDER
-mov cl, SECTOR
-mov dh, HEAD
-mov dl, [BOOT_DRIVE]
-
-xor bx, bx
-mov es, bx
-mov bx, 0x7e00
-
+mov si, dap
+mov ah, 0x42
+mov dl, 0x80
 int 0x13
 
 ; handle errors
@@ -94,5 +90,23 @@ print_hex:
     pop ax
     ret
 
-times 510-($-$$) db 0
+dap:
+    db 0x10
+    db 0
+    dw SECTORS_TO_READ
+    dw 0x7e00
+    dw 0x0000
+    dq 1
+
+times 446-($-$$) db 0
+
+; MBR
+db 0x80
+db 0, 1, 0
+db 0x83
+db 0, 0, 0
+dd 1
+dd 204800
+
+times 48 db 0
 dw 0xaa55

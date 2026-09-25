@@ -47,6 +47,12 @@ $(KERNEL_ELF): $(OBJECTS_C) linker.ld
 
 $(KERNEL_BIN): $(KERNEL_ELF)
 	objcopy -O binary $< $@
+	@size=$$(stat -c%s $@); \
+	    rem=$$((size % 512)); \
+		if [ $$rem -ne 0 ]; then \
+		pad=$$((512 - rem)); \
+		dd if=/dev/zero bs=1 count=$$pad >> $@ 2>/dev/null; \
+		fi
 
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)

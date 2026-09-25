@@ -16,6 +16,7 @@ prepare_GDT:
     or eax, 1
     mov cr0, eax
 
+
     jmp 0x08:init_protected_mode
 
 

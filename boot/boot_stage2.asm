@@ -27,6 +27,7 @@ enable_A20:
         ret
 
 main:
+    ; real hardware comes here and having triple fault, I'll fix that tomorrow
     call enable_A20
     jmp prepare_GDT
 

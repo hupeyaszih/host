@@ -121,6 +121,7 @@ switch_to_compatibility_mode:
     mov cr0, eax
     ret
 
+
 enable_long_mode:
     call check_CPUID
     cmp eax, 0
@@ -128,7 +129,6 @@ enable_long_mode:
 
     call does_support_long_mode
     jz no_long_mode_support
-    ; I have to implement 32-bit support in the future. But now, it only supports x86-64 CPUs
 
     ;print_char '0', 0, 0, 0x0B ; step 1 is successful
 
@@ -147,6 +147,8 @@ enable_long_mode:
     lgdt [long_mode_gdt]
 
     ;print_char '4', 0, 0, 0x0B ; step 4 is successful
+
+
 
     jmp 0x08:long_mode_start
 
@@ -167,7 +169,7 @@ long_mode_gdt_start:
     dw 0x0000 ; BASE (LOW)
     db 0x00   ; BASE (MID)
     db 0b10011010 ; ACCESS BYTE           ;   [Is Active (1 bit) | Privelege Level (2 bit) | Descriptor Type (1 bit) | Executable (1 bit) | DC (1 bit) | RW (1 bit) | Accessed (1 bit)]
-    db 0b11101111 ; Flags and Limit (HIGH);   [Granularity (1 bit) | DB (1 bit) | Long Mode (1 bit)]
+    db 0b10101111 ; Flags and Limit (HIGH);   [Granularity (1 bit) | DB (1 bit) | Long Mode (1 bit)]
     db 0b00   ; BASE (HIGH)
 
     ; Kernel Data Segment
@@ -175,7 +177,7 @@ long_mode_gdt_start:
     dw 0x0000 ; BASE (LOW)
     db 0x00   ; BASE (MID)
     db 0b10010010 ; ACCESS BYTE           ;   [Is Active (1 bit) | Privelege Level (2 bit) | Descriptor Type (1 bit) | Executable (1 bit) | DC (1 bit) | RW (1 bit) | Accessed (1 bit)]
-    db 0b11101111 ; Flags and Limit (HIGH);   [Granularity (1 bit) | DB (1 bit) | Long Mode (1 bit)]
+    db 0b10101111 ; Flags and Limit (HIGH);   [Granularity (1 bit) | DB (1 bit) | Long Mode (1 bit)]
     db 0b00   ; BASE (HIGH)
 long_mode_gdt_end:
 
@@ -197,6 +199,9 @@ long_mode_start:
     mov ss, ax
 
     mov rsp, 0x90000
+
+
+
 
     call 0x00008000
 
