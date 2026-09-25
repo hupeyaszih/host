@@ -1,7 +1,7 @@
 #include <cpuid.h>
 #include <stdint.h>
 
-void x86_64_get_cpu_brand(char *brand_string) {
+void cpu_get_cpu_brand(char *brand_string) {
     uint32_t *u32_str = (uint32_t *)brand_string;
     
     __get_cpuid(0x80000002, &u32_str[0], &u32_str[1], &u32_str[2], &u32_str[3]);

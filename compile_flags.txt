@@ -1,4 +1,5 @@
 -Iinclude
+-Iinclude/arch/x86_64
 -m64
 -ffreestanding
 -mno-red-zone

@@ -5,15 +5,21 @@ ASM_SOURCES = boot/boot_stage1.asm \
 			  boot/boot_stage2.asm
 
 C_SOURCES = src/kernel/kernel.c \
-			src/kernel/vga.c    \
-			src/arch/x86_64/x86_64_cpu.c
+			src/kernel/vga.c
 
 COMPILER  = gcc
 ASSEMBLER = nasm
 LINKER = ld
 
 
-CFLAGS = -m64 -ffreestanding -mno-red-zone -mno-sse -mno-mmx -fno-pie -fno-stack-protector -fno-builtin -Wall -Wextra -Iinclude -c
+# ARCH (currently, the only available arch is x86_64)
+ARCH ?= x86_64
+ARCH_INCLUDE = include/arch/$(ARCH)
+C_SOURCES += $(wildcard src/arch/$(ARCH)/*.c)
+#
+
+
+CFLAGS = -m64 -ffreestanding -mno-red-zone -mno-sse -mno-mmx -fno-pie -fno-stack-protector -fno-builtin -Wall -Wextra -Iinclude -I$(ARCH_INCLUDE) -c
 ASFLAGS = -f elf64
 ASFLAGS_BIN = -f bin
 LDFLAGS = -n -T linker.ld -nostdlib
