@@ -5,7 +5,8 @@ ASM_SOURCES = boot/boot_stage1.asm \
 			  boot/boot_stage2.asm
 
 C_SOURCES = src/kernel/kernel.c \
-			src/kernel/vga.c
+			src/kernel/vga.c \
+			src/utils/hstring.c
 
 COMPILER  = gcc
 ASSEMBLER = nasm
@@ -64,7 +65,7 @@ $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 
 run: $(TARGET)
-	qemu-system-x86_64 -drive format=raw,file=$(TARGET) -display sdl
+	qemu-system-x86_64 -drive format=raw,file=$(TARGET) -display sdl -m 4G
 
 clean:
 	rm -rf $(BUILD_DIR)

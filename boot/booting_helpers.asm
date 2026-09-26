@@ -6,6 +6,7 @@ ALL_TASKS            equ '0'
 TASK_DEFAULT         equ '1'
 TASK_TURN_ON_A20     equ '2'
 TASK_PREP_GDT        equ '3'
+TASK_CREATE_MEM_MAP  equ '4'
 ;
 
 %macro print 1
