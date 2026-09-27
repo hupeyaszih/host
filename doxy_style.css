@@ -64,6 +64,10 @@ table {
     color: var(--text-main) !important;
 }
 
+.fragment, .tt {
+    background-color: var(--bg-dark) !important;
+}
+
 .even, .odd {
     background-color: var(--bg-ligt) !important;
     color: var(--text-main) !important;
