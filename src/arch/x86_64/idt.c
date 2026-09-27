@@ -1,0 +1,1 @@
+const int IDT_TABLE_ADDRESS = 0x400;

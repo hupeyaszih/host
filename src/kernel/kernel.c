@@ -4,7 +4,10 @@
 void kernel_entry(void) {kernel_main();}
 #include "kernel/vga.h"
 
+#include "globals.h"
+
 #include <kernel/cpu.h>
+#include <kernel/idt.h>
 
 struct pmm_e820_entry {
     uint64_t base_address;
@@ -53,14 +56,20 @@ void kernel_main(void) {
     ++print_row;
     vga_print_string("TOTAL RAM (MB)", VGA_COLOR_LIGHT_GRAY, VGA_COLUMNS/2, print_row);
     ++print_row;
-    hstring_int_to_string(total_len_str, 20, total_ram/1024);
+    hstring_int_to_string(total_len_str, 20, GLOBALS_PREFIX_DEC, GLOBALS_PREFIX_DEC_LEN, total_ram/1024, GLOBALS_BASE_DEC);
     vga_print_string(total_len_str, VGA_COLOR_LIGHT_GREEN, VGA_COLUMNS/2, print_row);
     ++print_row;
 
     vga_print_string("TOTAL USABLE RAM (MB)", VGA_COLOR_LIGHT_GRAY, VGA_COLUMNS/2, print_row);
     ++print_row;
-    hstring_int_to_string(total_len_str, 20, total_usable_ram/1024);
+    hstring_int_to_string(total_len_str, 20, GLOBALS_PREFIX_DEC, GLOBALS_PREFIX_DEC_LEN, total_usable_ram/1024, GLOBALS_BASE_DEC);
     vga_print_string(total_len_str, VGA_COLOR_LIGHT_GREEN, VGA_COLUMNS/2, print_row);
     ++print_row;
 
+
+
+    print_row+=4;
+    char idt_addr[10];
+    hstring_int_to_string(idt_addr, 10, GLOBALS_PREFIX_HEX, GLOBALS_PREFIX_HEX_LEN, IDT_TABLE_ADDRESS, GLOBALS_BASE_HEX);
+    vga_print_string(idt_addr, VGA_COLOR_LIGHT_GREEN, VGA_COLUMNS/2, print_row);
 }
