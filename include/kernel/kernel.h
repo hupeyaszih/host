@@ -7,6 +7,6 @@
 #ifndef KERNEL_H
 #define KERNEL_H
 
-void kernel_main(void); ///< @brief The entry point of the kernel. Bootloader calls this. @details Function's address is 0x8200, Note: check the linker.ld for the most accurate information.
+void kernel_main(void); ///< @pre @ref kernel_entry() @brief The function is the entry point of the kernel. It is calling by the @ref kernel_entry().
 
 #endif

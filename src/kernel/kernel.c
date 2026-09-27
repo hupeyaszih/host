@@ -1,7 +1,9 @@
 #include "kernel/kernel.h"
+void kernel_entry(void) {kernel_main();} ///< @brief This function is calling by the bootloader. Then this function calls the @ref kernel_main(). @details Function's address is 0x00008200, Note: check the linker.ld for the most accurate information.
+
+
 #include "utils/hstring.h"
 #include <stdint.h>
-void kernel_entry(void) {kernel_main();}
 #include "kernel/vga.h"
 
 #include "globals.h"
