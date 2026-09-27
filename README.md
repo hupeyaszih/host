@@ -89,6 +89,23 @@ make run
 ```
 **NOTE:** Currently only supports `ARCH=x86_64`
 
+### Running on real hardware
+**HOST can run directly on real bare-metal hardware.**
+
+Steps:
+1. Ensure that you built host.bin (using the `make build` command).
+2. Write host.bin into the USB etc. via `dd` (linux) or you can use `Rufus` (Windows):
+```bash
+#Example using dd on Linux (WARNING: double-check the target is your USB to avoid data loss!)
+sudo dd if=./build/host.bin of=/dev/<Your USB> bs=512 conv=notrunc status=progress oflag=sync
+```
+3. Plug the USB into the target machine.
+4. Access your motherboard's BIOS settings and ensure:
+    - Secure boot is disabled
+    - Legacy Boot / CSM (Compability Support Mode) is enabled.
+5. Boot from the USB and there it is. HOST is booted!
+
+
 ### Useful Make Targets
 `make clean` - removes `build/` directory
 
