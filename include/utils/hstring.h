@@ -1,3 +1,9 @@
+/**
+* @file   : utils/hstring.h
+* @brief  : utils/hstring.h aims to help to the kernel by processing strings to reduce kernel complexity.
+* @details: This module's work is to process strings without any dependency.
+*/
+
 #ifndef HSTRING_H
 #define HSTRING_H
 

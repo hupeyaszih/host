@@ -1,3 +1,9 @@
+/**
+* @file   : kernel/vga.h
+* @brief  : VGA driver
+* @details: This module provides structures, functions, global variables/constants etc. to use VGA efficiently
+*/
+
 #ifndef VGA_H
 #define VGA_H
 
