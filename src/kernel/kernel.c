@@ -10,10 +10,10 @@ void kernel_entry(void) {kernel_main();}
 #include <kernel/idt.h>
 
 struct pmm_e820_entry {
-    uint64_t base_address;
-    uint64_t length;
-    uint32_t type;
-    uint32_t extended_attributes;
+    uint64_t base_address;        ///< Start address of the memory area
+    uint64_t length;              ///< Length of the area in bytes
+    uint32_t type;                ///< Kind of area (1:usable, etc.)
+    uint32_t extended_attributes; ///< Extended attributes flags
 } __attribute__((packed));
 
 void kernel_main(void) {

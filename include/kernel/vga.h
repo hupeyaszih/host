@@ -30,6 +30,15 @@
 
 void vga_clear_screen();
 void vga_print_char(char ch, unsigned int color, int x, int y);
-void vga_print_string(char *string, unsigned int color, int x, int y);
+
+/** 
+ * @brief string printer function
+ * @details Prints the given string via VGA
+ * @param *string A String to print.
+ * @param color The color string will be printed, VGA color code.
+ * @param x row
+ * @param y column
+*/
+void vga_print_string(char *string, unsigned int color, int x, int y); 
 
 #endif
