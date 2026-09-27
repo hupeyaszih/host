@@ -67,9 +67,7 @@ create_mem_map:
 main:
     ; real hardware comes here and having triple fault, I'll fix that tomorrow
     call enable_A20
-    print_err ALL_TASKS
     call create_mem_map
-    print_err ALL_TASKS
     jmp prepare_GDT
 
 ; End of code

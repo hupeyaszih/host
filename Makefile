@@ -67,5 +67,8 @@ $(BUILD_DIR):
 run: $(TARGET)
 	qemu-system-x86_64 -drive format=raw,file=$(TARGET) -display sdl -m 4G
 
+docs:
+	doxygen
+
 clean:
 	rm -rf $(BUILD_DIR)
