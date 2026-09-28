@@ -6,7 +6,8 @@ ASM_SOURCES = boot/boot_stage1.asm \
 
 C_SOURCES = src/kernel/kernel.c \
 			src/kernel/vga.c \
-			src/utils/hstring.c
+			src/utils/hstring.c \
+			src/utils/klibc.c
 
 COMPILER  = gcc
 ASSEMBLER = nasm
@@ -20,7 +21,7 @@ C_SOURCES += $(wildcard src/arch/$(ARCH)/*.c)
 #
 
 
-CFLAGS = -m64 -ffreestanding -mno-red-zone -mno-sse -mno-mmx -fno-pie -fno-stack-protector -fno-builtin -Wall -Wextra -Iinclude -I$(ARCH_INCLUDE) -c
+CFLAGS = -m64 -ffreestanding -mno-red-zone -mno-sse -mno-mmx -mno-80387 -fno-pie -fno-stack-protector -fno-builtin -Wall -Wextra -Iinclude -I$(ARCH_INCLUDE) -c -Wunused-parameter
 ASFLAGS = -f elf64
 ASFLAGS_BIN = -f bin
 LDFLAGS = -n -T linker.ld -nostdlib

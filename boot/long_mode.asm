@@ -200,7 +200,7 @@ long_mode_start:
 
     mov rsp, 0x90000
 
-    call 0x00008200
+    jmp 0x00008200
 
     hlt
     jmp $

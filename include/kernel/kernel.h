@@ -7,6 +7,14 @@
 #ifndef KERNEL_H
 #define KERNEL_H
 
+#include <kernel/idt.h>
+
+
+struct kernel_context {
+    struct idt_table64 *idt_table;
+};
+
 void kernel_main(void); ///< @pre @ref kernel_entry() @brief The function is the entry point of the kernel. It is calling by the @ref kernel_entry().
+
 
 #endif

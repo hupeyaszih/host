@@ -1,15 +1,13 @@
 #include "kernel/kernel.h"
 void kernel_entry(void) {kernel_main();} ///< @brief This function is calling by the bootloader. Then this function calls the @ref kernel_main(). @details Function's address is 0x00008200, Note: check the linker.ld for the most accurate information.
 
-
 #include "utils/hstring.h"
-#include <stdint.h>
 #include "kernel/vga.h"
-
 #include "globals.h"
-
+#include "utils/klibc.h"
 #include <kernel/cpu.h>
-#include <kernel/idt.h>
+
+#include <stdint.h>
 
 struct pmm_e820_entry {
     uint64_t base_address;        ///< Start address of the memory area
@@ -19,18 +17,22 @@ struct pmm_e820_entry {
 } __attribute__((packed));
 
 void kernel_main(void) {
+    struct kernel_context context;
+
     vga_clear_screen();
 
+    idt_init_idt();
+    idt_load_idt();
 
-    vga_print_string("HUPEYASZIH", VGA_COLOR_CYAN, VGA_COLUMNS/2, VGA_ROWS/2-12);
-    vga_print_string("Designed by Poyraz BAKIRTAS", VGA_COLOR_LIGHT_GRAY, VGA_COLUMNS/2, VGA_ROWS/2-10);
-    vga_print_string("-HOST-", VGA_COLOR_LIGHT_RED, VGA_COLUMNS/2, VGA_ROWS/2-8);
+    // testing // I'm aware of that this is not clean right now but I'll make them clean
 
+    vga_print_string("HUPEYASZIH", VGA_COLOR_CYAN, VGA_COLUMNS/2, VGA_ROWS/2-12, true);
+    vga_print_string("Designed by Poyraz BAKIRTAS", VGA_COLOR_LIGHT_GRAY, VGA_COLUMNS/2, VGA_ROWS/2-10, true);
+    vga_print_string("-HOST-", VGA_COLOR_LIGHT_RED, VGA_COLUMNS/2, VGA_ROWS/2-8, true);
 
     char cpu_str[49];
     cpu_get_cpu_brand(cpu_str);
-    vga_print_string(cpu_str, VGA_COLOR_GREEN, VGA_COLUMNS/2, VGA_ROWS/2-6);
-
+    vga_print_string(cpu_str, VGA_COLOR_GREEN, VGA_COLUMNS/2, VGA_ROWS/2-6, true);
     //
 
     uint32_t *entry_count_ptr = (uint32_t *) 0x4FC;
@@ -43,7 +45,7 @@ void kernel_main(void) {
 
 
     ++print_row;
-    vga_print_string("-RAM-", VGA_COLOR_MAGENTA, VGA_COLUMNS/2, print_row);
+    vga_print_string("-RAM-", VGA_COLOR_MAGENTA, VGA_COLUMNS/2, print_row, true);
     ++print_row;
 
     for(uint32_t i = 0;i < entry_count; ++i) {
@@ -54,24 +56,18 @@ void kernel_main(void) {
         total_usable_ram += len;
     }
 
-    char total_len_str[20];
     ++print_row;
-    vga_print_string("TOTAL RAM (MB)", VGA_COLOR_LIGHT_GRAY, VGA_COLUMNS/2, print_row);
+    vga_print_string("TOTAL RAM (MB)", VGA_COLOR_LIGHT_GRAY, VGA_COLUMNS/2, print_row, true);
     ++print_row;
-    hstring_int_to_string(total_len_str, 20, GLOBALS_PREFIX_DEC, GLOBALS_PREFIX_DEC_LEN, total_ram/1024, GLOBALS_BASE_DEC);
-    vga_print_string(total_len_str, VGA_COLOR_LIGHT_GREEN, VGA_COLUMNS/2, print_row);
+    kprintf(VGA_COLOR_LIGHT_GREEN, VGA_COLUMNS/2, print_row, "%d", total_ram/1024);
     ++print_row;
 
-    vga_print_string("TOTAL USABLE RAM (MB)", VGA_COLOR_LIGHT_GRAY, VGA_COLUMNS/2, print_row);
+    vga_print_string("TOTAL USABLE RAM (MB)", VGA_COLOR_LIGHT_GRAY, VGA_COLUMNS/2, print_row, true);
     ++print_row;
-    hstring_int_to_string(total_len_str, 20, GLOBALS_PREFIX_DEC, GLOBALS_PREFIX_DEC_LEN, total_usable_ram/1024, GLOBALS_BASE_DEC);
-    vga_print_string(total_len_str, VGA_COLOR_LIGHT_GREEN, VGA_COLUMNS/2, print_row);
+    kprintf(VGA_COLOR_LIGHT_GREEN, VGA_COLUMNS/2, print_row, "%d", total_usable_ram/1024);
     ++print_row;
 
+    kprintf(VGA_COLOR_BLUE, 0, 21, "VGA has %d columns\n%hsc%s\n%hrc%c\n%hsx%hsc%s", 80, VGA_COLOR_LIGHT_WHITE,"I love programming",'[', 5, VGA_COLOR_RED,"Poyraz BAKIRTAS");
 
-
-    print_row+=4;
-    char idt_addr[10];
-    hstring_int_to_string(idt_addr, 10, GLOBALS_PREFIX_HEX, GLOBALS_PREFIX_HEX_LEN, IDT_TABLE_ADDRESS, GLOBALS_BASE_HEX);
-    vga_print_string(idt_addr, VGA_COLOR_LIGHT_GREEN, VGA_COLUMNS/2, print_row);
+    cpu_stop_cpu();
 }

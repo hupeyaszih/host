@@ -8,6 +8,8 @@
 #define HSTRING_H
 
 #include <stdint.h>
+
 void hstring_int_to_string(char *buffer, uint64_t buffer_len, const char *prefix, uint32_t prefix_len, int64_t num, uint32_t base);
+uint32_t hstring_strlen(const char *restrict str);
 
 #endif

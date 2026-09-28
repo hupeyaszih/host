@@ -10,3 +10,7 @@ void cpu_get_cpu_brand(char *brand_string) {
     
     brand_string[48] = '\0';
 }
+
+void cpu_stop_cpu() {
+    __asm__ __volatile__ ("cli; hlt");
+}

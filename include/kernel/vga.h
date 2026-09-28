@@ -7,6 +7,9 @@
 #ifndef VGA_H
 #define VGA_H
 
+#include <stdint.h>
+#include <stdbool.h>
+
 #define VGA_COLUMNS 80
 #define VGA_ROWS 25
 
@@ -29,7 +32,7 @@
 #define VGA_COLOR_LIGHT_WHITE     0x0F
 
 void vga_clear_screen();
-void vga_print_char(char ch, unsigned int color, int x, int y);
+void vga_print_char(char ch, uint8_t color, uint8_t x, uint8_t y);
 
 /** 
  * @brief string printer function
@@ -39,6 +42,6 @@ void vga_print_char(char ch, unsigned int color, int x, int y);
  * @param x row
  * @param y column
 */
-void vga_print_string(char *string, unsigned int color, int x, int y); 
+void vga_print_string(char *string, uint8_t color, uint8_t x, uint8_t y, bool align);
 
 #endif

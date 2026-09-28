@@ -49,3 +49,12 @@ exit:
     buffer[0] = '\0';
     return;
 }
+
+uint32_t hstring_strlen(const char *restrict str) {
+    if(!str) return 0;
+    uint32_t len = 0;
+    while(str+len && str[len] != '\0') {
+        ++len;
+    }
+    return len;
+}

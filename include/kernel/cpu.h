@@ -8,6 +8,7 @@
 #define KERNEL_CPU_H
 
 void cpu_get_cpu_brand(char *brand_string);
+void cpu_stop_cpu();
 
 #include <cpu.h>
 
