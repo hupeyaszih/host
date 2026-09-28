@@ -49,9 +49,9 @@ NOTE: Virtual memory management is still available via the memory manager design
 - [x] jumping to the kernel
 - [x] VGA driver
 - [x] Memory Map
+- [x] IDT (Interrupt Descriptor Table), NOTE: done, but needs reconsideration.
 
 ## Roadmap
-- [ ] IDT (Interrupt Descriptor Table)
 - [ ] Memory Manager (PMM and VMM)
 - [ ] Other stuffs
 
