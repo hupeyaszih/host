@@ -1,0 +1,6 @@
+<map id="kernel_main" name="kernel_main">
+<area shape="rect" id="Node000001" title="The function is the entry point of the kernel. It is calling by the kernel_entry()." alt="" coords="159,29,260,57"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="233,13,225,10,209,8,194,10,186,14,184,20,187,30,183,28,178,20,182,11,192,5,209,3,227,5,238,14"/>
+<area shape="rect" id="Node000002" href="$kernel_8c.html#a7cd22eb787a5ddf3e7e861d933428001" title=" " alt="" coords="5,29,111,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,43,111,46,111,41,145,43"/>
+</map>

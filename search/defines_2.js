@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['vga_5fcolor_5fblack_0',['VGA_COLOR_BLACK',['../vga_8h.html#a73901b0d733267c2657436295f1978dc',1,'vga.h']]],
+  ['vga_5fcolor_5fblue_1',['VGA_COLOR_BLUE',['../vga_8h.html#ab08704a473a69421054ee6e21b79b4fc',1,'vga.h']]],
+  ['vga_5fcolor_5fbrown_2',['VGA_COLOR_BROWN',['../vga_8h.html#a9049cba8e7f700795a11b09915d7877a',1,'vga.h']]],
+  ['vga_5fcolor_5fcyan_3',['VGA_COLOR_CYAN',['../vga_8h.html#a81e94de79191a5559833550b7f1306ff',1,'vga.h']]],
+  ['vga_5fcolor_5fdark_5fgray_4',['VGA_COLOR_DARK_GRAY',['../vga_8h.html#ad7ff2045b1580bfc52913d953b3c1413',1,'vga.h']]],
+  ['vga_5fcolor_5fgreen_5',['VGA_COLOR_GREEN',['../vga_8h.html#a5d2b2f23f49c91eeb31094aac1e4894b',1,'vga.h']]],
+  ['vga_5fcolor_5flight_5fblue_6',['VGA_COLOR_LIGHT_BLUE',['../vga_8h.html#a740bf62d32d846c7fe0ca666b742dae2',1,'vga.h']]],
+  ['vga_5fcolor_5flight_5fcyan_7',['VGA_COLOR_LIGHT_CYAN',['../vga_8h.html#a42b6eab9adda99328aeb334d5a81ac9b',1,'vga.h']]],
+  ['vga_5fcolor_5flight_5fgray_8',['VGA_COLOR_LIGHT_GRAY',['../vga_8h.html#a478e9bdd27a6a7b12cae43231208715b',1,'vga.h']]],
+  ['vga_5fcolor_5flight_5fgreen_9',['VGA_COLOR_LIGHT_GREEN',['../vga_8h.html#a55e4f61a6abc2adecaca26b9f789faf7',1,'vga.h']]],
+  ['vga_5fcolor_5flight_5fmagenta_10',['VGA_COLOR_LIGHT_MAGENTA',['../vga_8h.html#a1c9025a91117195b2f3374d686474889',1,'vga.h']]],
+  ['vga_5fcolor_5flight_5fred_11',['VGA_COLOR_LIGHT_RED',['../vga_8h.html#a3d69ae8ce17574a4675e6ffbc152b90d',1,'vga.h']]],
+  ['vga_5fcolor_5flight_5fwhite_12',['VGA_COLOR_LIGHT_WHITE',['../vga_8h.html#a83e08fa3847145af905013de96de62f5',1,'vga.h']]],
+  ['vga_5fcolor_5flight_5fyellow_13',['VGA_COLOR_LIGHT_YELLOW',['../vga_8h.html#aa0f2a22fff5a73b95d91aa58bd8732d7',1,'vga.h']]],
+  ['vga_5fcolor_5fmagenta_14',['VGA_COLOR_MAGENTA',['../vga_8h.html#ae0e8047eab1a8ed25d80ddb3d241cd73',1,'vga.h']]],
+  ['vga_5fcolor_5fred_15',['VGA_COLOR_RED',['../vga_8h.html#ae7ee4bc8925d59a7a2aa1ae69fa8cee4',1,'vga.h']]],
+  ['vga_5fcolumns_16',['VGA_COLUMNS',['../vga_8h.html#a0a39c24751de84b35e375fd01773d436',1,'vga.h']]],
+  ['vga_5frows_17',['VGA_ROWS',['../vga_8h.html#a8945371183931411b4b48dac98be91d9',1,'vga.h']]]
+];

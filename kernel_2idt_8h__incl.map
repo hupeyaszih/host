@@ -1,0 +1,6 @@
+<map id="include/kernel/idt.h" name="include/kernel/idt.h">
+<area shape="rect" id="Node000001" title=": Interrupt Descriptor Table (IDT) configuration and setup functions." alt="" coords="5,5,151,33"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="151,3,170,8,177,19,174,27,167,32,164,27,170,23,172,19,167,12,151,8"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="43,81,113,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,32,81,66,75,65,76,36"/>
+</map>

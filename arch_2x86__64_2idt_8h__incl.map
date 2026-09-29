@@ -1,0 +1,5 @@
+<map id="include/arch/x86_64/idt.h" name="include/arch/x86_64/idt.h">
+<area shape="rect" id="Node000001" title=": x86_64 dependent codes about Interrupt Descriptor Table (IDT)" alt="" coords="5,5,157,50"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="46,98,116,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,48,84,83,78,82,79,52"/>
+</map>

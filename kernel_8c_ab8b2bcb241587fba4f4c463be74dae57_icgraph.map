@@ -1,0 +1,5 @@
+<map id="kernel_entry" name="kernel_entry">
+<area shape="rect" id="Node000001" title="This function is calling by the bootloader. Then this function calls the kernel_main()." alt="" coords="159,5,261,33"/>
+<area shape="rect" id="Node000002" href="$kernel_8c.html#a7cd22eb787a5ddf3e7e861d933428001" title=" " alt="" coords="5,5,111,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,19,111,22,111,17,146,19"/>
+</map>

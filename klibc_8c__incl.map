@@ -1,0 +1,19 @@
+<map id="src/utils/klibc.c" name="src/utils/klibc.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="242,5,361,33"/>
+<area shape="rect" id="Node000002" href="$klibc_8h.html" title=" " alt="" coords="5,81,102,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="256,36,113,79,111,74,258,31"/>
+<area shape="rect" id="Node000004" href="$hstring_8h.html" title=": utils/hstring.h aims to help to the kernel by processing strings to reduce kernel complexity." alt="" coords="126,81,237,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="282,32,217,75,214,71,278,35"/>
+<area shape="rect" id="Node000005" href="$globals_8h.html" title=": globals.h aims to define global helpers and variables." alt="" coords="261,81,342,109"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="303,31,304,67,299,64,300,36"/>
+<area shape="rect" id="Node000006" href="$vga_8h.html" title=": VGA driver" alt="" coords="366,81,467,109"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="323,31,386,72,380,73,321,36"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="491,81,565,109"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="342,31,479,76,474,77,342,36"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="146,157,217,184"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="77,107,148,148,144,150,76,112"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="183,107,184,142,179,140,180,111"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="377,109,232,156,231,151,372,109"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="376,157,457,184"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="418,107,418,143,414,139,414,111"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="kprintf" name="kprintf">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,131,70,158"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="10,131,5,122,9,112,20,106,38,104,56,107,68,114,63,116,55,112,37,109,22,111,13,116,11,121,15,130"/>
+<area shape="rect" id="Node000002" href="$hstring_8c.html#a2c1e1ff71d5bc8de40f024d1c30df3ae" title=" " alt="" coords="118,29,272,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,129,77,98,116,68,131,62,127,66,119,72,81,102,52,132"/>
+<area shape="rect" id="Node000003" href="$hstring_8c.html#a4f39510dc2108e0f7393cf06794db469" title=" " alt="" coords="140,105,250,133"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="69,137,126,129,122,132,71,142"/>
+<area shape="rect" id="Node000004" href="$vga_8c.html#a7fcc2c2d9e847298179aa236f72acbce" title=" " alt="" coords="320,193,437,221"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="70,148,306,191,304,196,70,153"/>
+<area shape="rect" id="Node000005" href="$vga_8c.html#ac73a828042e27abd6c376cb8ca194c05" title="string printer function" alt="" coords="132,231,258,258"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="62,156,161,220,156,223,60,161"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="167,29,163,20,166,11,177,5,195,3,214,5,225,14,220,14,212,10,195,8,179,10,170,14,168,20,172,29"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="167,104,163,96,166,87,177,81,195,79,214,81,225,90,220,90,212,86,195,84,179,86,170,90,168,96,172,105"/>
+<area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="347,192,342,184,346,175,358,169,379,167,401,169,414,178,408,178,399,174,379,172,360,174,349,179,347,184,351,194"/>
+<area shape="poly" id="edge9_Node000005_Node000004" title=" " alt="" coords="258,229,302,223,307,222,259,234"/>
+<area shape="poly" id="edge10_Node000005_Node000005" title=" " alt="" coords="167,229,163,222,166,212,177,206,195,204,214,207,225,216,220,215,212,212,195,209,179,211,170,216,168,221,172,231"/>
+</map>

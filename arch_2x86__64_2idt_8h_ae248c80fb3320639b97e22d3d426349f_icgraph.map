@@ -1,0 +1,14 @@
+<map id="x86_64_idt_divide_error" name="x86_64_idt_divide_error">
+<area shape="rect" id="Node000001" title=" " alt="" coords="461,44,639,72"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="581,28,571,25,550,23,530,25,520,29,517,35,522,45,517,42,512,35,516,26,529,19,550,17,572,20,586,29"/>
+<area shape="rect" id="Node000002" href="$idt_8c.html#ac19eb4de4dc0b4416177de4f1be2c9e6" title=" " alt="" coords="308,5,413,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="461,40,413,32,414,27,467,40"/>
+<area shape="rect" id="Node000003" href="$idt_8c.html#ae85123f837e1dd36b430a93b0121a00e" title="Initializes the IDT table, loads the entries." alt="" coords="316,81,406,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="465,75,407,89,406,84,459,75"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="384,65,377,62,361,60,345,62,337,66,335,72,339,82,334,80,330,72,333,63,344,57,361,55,379,57,390,66"/>
+<area shape="rect" id="Node000004" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="The function is the entry point of the kernel. It is calling by the kernel_entry()." alt="" coords="159,81,260,109"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="297,95,260,98,260,93,303,95"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="233,65,225,62,209,60,194,62,186,66,184,72,187,82,183,80,178,72,182,63,192,57,209,55,227,57,238,66"/>
+<area shape="rect" id="Node000005" href="$kernel_8c.html#a7cd22eb787a5ddf3e7e861d933428001" title=" " alt="" coords="5,81,111,109"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="140,95,111,98,111,93,145,95"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="x86_64_idt_default" name="x86_64_idt_default">
+<area shape="rect" id="Node000001" title="Default." alt="" coords="446,29,592,57"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="546,13,537,10,519,8,502,10,493,15,491,20,495,30,490,28,485,20,489,11,501,5,519,3,539,5,551,15"/>
+<area shape="rect" id="Node000002" href="$idt_8c.html#ae85123f837e1dd36b430a93b0121a00e" title="Initializes the IDT table, loads the entries." alt="" coords="308,29,398,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="428,43,399,46,399,41,434,43"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="376,13,368,10,353,8,339,10,331,14,329,20,332,30,328,28,324,20,327,11,337,5,353,3,370,5,381,14"/>
+<area shape="rect" id="Node000003" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="The function is the entry point of the kernel. It is calling by the kernel_entry()." alt="" coords="159,29,260,57"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="290,43,260,46,260,41,295,43"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="232,13,224,10,209,8,195,10,187,14,185,20,189,30,184,28,180,20,183,11,193,5,209,3,226,5,237,14"/>
+<area shape="rect" id="Node000004" href="$kernel_8c.html#a7cd22eb787a5ddf3e7e861d933428001" title=" " alt="" coords="5,29,111,57"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="140,43,111,46,111,41,145,43"/>
+</map>

@@ -1,0 +1,23 @@
+<map id="vga_print_char" name="vga_print_char">
+<area shape="rect" id="Node000001" title=" " alt="" coords="669,99,786,126"/>
+<area shape="poly" id="edge10_Node000001_Node000001" title=" " alt="" coords="755,83,746,80,727,77,710,79,701,84,698,89,702,99,698,97,693,90,697,80,708,74,727,72,748,75,760,84"/>
+<area shape="rect" id="Node000002" href="$klibc_8c.html#a063e9dadf76cf2ee27b615a264c57d58" title=" " alt="" coords="347,29,411,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="686,91,655,78,620,66,563,54,506,48,412,45,412,40,506,43,564,49,621,61,657,73,691,91"/>
+<area shape="rect" id="Node000006" href="$vga_8c.html#ac5763b08852c102706f3faae0dfdfc73" title=" " alt="" coords="312,167,446,194"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="656,130,621,140,447,172,447,167,620,135,651,131"/>
+<area shape="rect" id="Node000007" href="$vga_8c.html#ac73a828042e27abd6c376cb8ca194c05" title="string printer function" alt="" coords="494,99,621,126"/>
+<area shape="poly" id="edge11_Node000001_Node000007" title=" " alt="" coords="650,113,621,115,621,110,655,112"/>
+<area shape="poly" id="edge6_Node000002_Node000002" title=" " alt="" coords="406,14,398,10,379,8,362,10,353,15,350,20,355,30,350,28,345,20,349,11,360,5,379,3,399,5,411,14"/>
+<area shape="rect" id="Node000003" href="$idt_8c.html#ac19eb4de4dc0b4416177de4f1be2c9e6" title=" " alt="" coords="159,23,264,50"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="329,42,265,41,264,36,334,40"/>
+<area shape="rect" id="Node000004" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="The function is the entry point of the kernel. It is calling by the kernel_entry()." alt="" coords="161,99,262,126"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="335,61,248,101,246,96,330,63"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="235,83,228,79,211,77,196,79,187,84,185,89,189,99,184,97,180,90,183,80,194,74,211,72,229,74,241,83"/>
+<area shape="rect" id="Node000005" href="$kernel_8c.html#a7cd22eb787a5ddf3e7e861d933428001" title=" " alt="" coords="5,99,111,126"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="143,114,112,115,111,110,147,111"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="326,161,247,130,248,124,332,160"/>
+<area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="406,151,398,148,379,145,362,147,353,152,350,157,354,167,350,165,345,158,349,148,360,142,379,140,399,143,411,152"/>
+<area shape="poly" id="edge13_Node000007_Node000002" title=" " alt="" coords="503,93,411,58,412,53,508,92"/>
+<area shape="poly" id="edge12_Node000007_Node000004" title=" " alt="" coords="477,114,262,115,262,110,481,111"/>
+<area shape="poly" id="edge14_Node000007_Node000007" title=" " alt="" coords="585,83,576,80,557,77,540,79,531,84,528,89,533,99,528,97,523,90,527,80,539,74,558,72,578,75,590,84"/>
+</map>

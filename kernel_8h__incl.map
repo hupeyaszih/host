@@ -1,0 +1,8 @@
+<map id="include/kernel/kernel.h" name="include/kernel/kernel.h">
+<area shape="rect" id="Node000001" title=": kernel main" alt="" coords="5,5,174,33"/>
+<area shape="rect" id="Node000002" href="$kernel_2idt_8h.html" title=": Interrupt Descriptor Table (IDT) configuration and setup functions." alt="" coords="42,81,137,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,31,92,66,87,65,89,36"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="137,78,155,83,163,95,160,103,153,108,150,104,156,100,158,95,152,87,137,83"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="54,157,125,184"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,107,92,142,87,140,88,111"/>
+</map>

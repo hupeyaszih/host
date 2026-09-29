@@ -1,0 +1,27 @@
+<map id="src/kernel/kernel.c" name="src/kernel/kernel.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="278,5,418,33"/>
+<area shape="rect" id="Node000002" href="$kernel_8h.html" title=": kernel main" alt="" coords="5,81,123,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="296,36,130,79,128,74,299,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="222,232,292,260"/>
+<area shape="poly" id="edge15_Node000001_Node000004" title=" " alt="" coords="319,35,290,55,253,82,218,117,193,158,190,171,193,183,207,204,226,224,220,223,203,207,188,185,184,171,188,156,214,113,249,78,287,51,323,32"/>
+<area shape="rect" id="Node000005" href="$hstring_8h.html" title=": utils/hstring.h aims to help to the kernel by processing strings to reduce kernel complexity." alt="" coords="202,157,312,184"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="332,32,309,56,288,82,274,112,265,143,260,140,269,110,283,80,305,52,328,35"/>
+<area shape="rect" id="Node000006" href="$vga_8h.html" title=": VGA driver" alt="" coords="297,81,399,109"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="349,31,350,67,346,64,347,36"/>
+<area shape="rect" id="Node000008" href="$globals_8h.html" title=": globals.h aims to define global helpers and variables." alt="" coords="422,81,503,109"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="369,31,432,72,427,73,368,36"/>
+<area shape="rect" id="Node000009" href="$klibc_8h.html" title=" " alt="" coords="493,157,590,184"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="418,28,470,47,495,61,517,79,534,109,542,143,537,140,529,111,513,83,492,65,468,52,418,34"/>
+<area shape="rect" id="Node000010" href="$kernel_2cpu_8h.html" title=": Arch independent codes about cpu" alt="" coords="578,81,678,109"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="398,31,566,76,561,78,398,36"/>
+<area shape="rect" id="Node000003" href="$kernel_2idt_8h.html" title=": Interrupt Descriptor Table (IDT) configuration and setup functions." alt="" coords="10,157,104,184"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="64,107,63,142,57,140,62,112"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="104,154,123,158,131,170,128,179,121,184,118,179,124,175,126,171,120,163,105,159"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="94,182,210,225,206,228,93,188"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="259,183,260,218,255,215,255,187"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="349,107,343,145,326,186,310,207,290,225,288,220,306,203,322,183,338,144,345,111"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="387,157,469,184"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="363,107,405,146,400,146,362,112"/>
+<area shape="poly" id="edge12_Node000009_Node000004" title=" " alt="" coords="495,184,308,235,307,229,490,184"/>
+<area shape="poly" id="edge14_Node000010_Node000010" title=" " alt="" coords="679,78,697,83,705,95,702,103,694,108,692,103,698,100,700,95,694,87,679,83"/>
+</map>

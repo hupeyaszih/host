@@ -1,0 +1,11 @@
+<map id="kprintf" name="kprintf">
+<area shape="rect" id="Node000001" title=" " alt="" coords="312,44,376,72"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="365,28,358,25,344,23,331,25,324,29,322,35,325,45,320,42,317,35,320,26,329,20,344,17,360,20,370,29"/>
+<area shape="rect" id="Node000002" href="$idt_8c.html#ac19eb4de4dc0b4416177de4f1be2c9e6" title=" " alt="" coords="159,5,264,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="295,44,261,36,261,31,300,44"/>
+<area shape="rect" id="Node000003" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="The function is the entry point of the kernel. It is calling by the kernel_entry()." alt="" coords="161,81,262,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="300,70,263,83,262,78,295,71"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="232,65,225,62,211,60,198,62,191,66,189,72,192,82,188,80,184,72,187,63,196,57,211,55,227,57,237,66"/>
+<area shape="rect" id="Node000004" href="$kernel_8c.html#a7cd22eb787a5ddf3e7e861d933428001" title=" " alt="" coords="5,81,111,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="142,95,111,98,111,93,148,95"/>
+</map>

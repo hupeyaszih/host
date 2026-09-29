@@ -1,0 +1,15 @@
+<map id="vga_print_string" name="vga_print_string">
+<area shape="rect" id="Node000001" title="string printer function" alt="" coords="424,55,551,82"/>
+<area shape="poly" id="edge8_Node000001_Node000001" title=" " alt="" coords="510,38,503,35,487,33,473,35,465,40,463,45,467,55,462,53,458,46,461,36,471,30,488,28,505,30,515,39"/>
+<area shape="rect" id="Node000002" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="The function is the entry point of the kernel. It is calling by the kernel_entry()." alt="" coords="161,29,262,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="406,60,376,59,263,50,262,44,377,54,411,60"/>
+<area shape="rect" id="Node000004" href="$klibc_8c.html#a063e9dadf76cf2ee27b615a264c57d58" title=" " alt="" coords="312,92,376,120"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="420,86,377,100,376,95,415,87"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="232,13,225,10,211,8,198,10,191,14,189,20,192,30,187,28,184,20,187,11,196,5,211,3,227,5,237,14"/>
+<area shape="rect" id="Node000003" href="$kernel_8c.html#a7cd22eb787a5ddf3e7e861d933428001" title=" " alt="" coords="5,29,111,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="143,44,112,46,111,41,148,42"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="297,85,242,60,243,55,302,85"/>
+<area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="365,76,358,73,344,71,331,73,324,77,322,83,325,93,320,90,317,83,320,74,329,68,344,65,360,68,370,77"/>
+<area shape="rect" id="Node000005" href="$idt_8c.html#ac19eb4de4dc0b4416177de4f1be2c9e6" title=" " alt="" coords="159,92,264,120"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="294,106,264,108,264,103,299,106"/>
+</map>
