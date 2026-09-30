@@ -10,8 +10,8 @@
 
 #include <stdint.h>
 
-extern const int IDT_TABLE_ENTRY_COUNT;
-extern const int IDT_TABLE_MAX_ENTRY_COUNT;
+extern const uint32_t IDT_TABLE_ENTRY_COUNT;
+extern const uint32_t IDT_TABLE_MAX_ENTRY_COUNT;
 
 
 /**

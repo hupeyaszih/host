@@ -4,8 +4,8 @@
 
 #define STOP_CPU __asm__ __volatile__ ("cli; hlt")
 
-const int IDT_TABLE_ENTRY_COUNT     = 22;
-const int IDT_TABLE_MAX_ENTRY_COUNT = 256;
+const uint32_t IDT_TABLE_ENTRY_COUNT     = 22;
+const uint32_t IDT_TABLE_MAX_ENTRY_COUNT = 256;
 
 struct idt_entry entries[256]; ///< @brief Entries of the IDT table in x86_64. @attention The reason why this is defined as a global is that it shouldn't be in stack and doesn't need to be in a specific address.
 struct idt_ptr idt_ptr;
