@@ -7,6 +7,6 @@ var idt_8c =
     [ "idt_set_gate", "idt_8c.html#a681ac78678c624493832074c94d05f26", null ],
     [ "entries", "idt_8c.html#ace349d9cf3c74f0d882925f0364f07d6", null ],
     [ "idt_ptr", "idt_8c.html#aad29192a2a9f1a42fb5d18f97b732bfa", null ],
-    [ "IDT_TABLE_ENTRY_COUNT", "idt_8c.html#a87f130e7691dbce9a0e24efd82a3ba2f", null ],
-    [ "IDT_TABLE_MAX_ENTRY_COUNT", "idt_8c.html#a90714e23a0b84d38d1965fce5536e2ae", null ]
+    [ "IDT_TABLE_ENTRY_COUNT", "idt_8c.html#a98b19769e0bf16599c14a29d0e37df6c", null ],
+    [ "IDT_TABLE_MAX_ENTRY_COUNT", "idt_8c.html#ae664544fcb9ce90f7caab290ffaadf4c", null ]
 ];

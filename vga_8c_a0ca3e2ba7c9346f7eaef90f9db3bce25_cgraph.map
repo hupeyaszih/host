@@ -1,7 +1,0 @@
-<map id="vga_print_string" name="vga_print_string">
-<area shape="rect" id="Node000001" title="string printer function" alt="" coords="5,29,132,57"/>
-<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="38,29,34,20,38,11,50,5,69,3,89,5,101,14,96,14,87,10,68,8,51,10,42,15,39,20,44,29"/>
-<area shape="rect" id="Node000002" href="$vga_8c.html#af6753c572ad1cc2d097f4312a6121896" title=" " alt="" coords="180,29,297,57"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,41,167,43,161,43,132,46"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="209,28,204,20,208,11,219,5,238,3,259,5,271,14,266,14,257,10,238,8,221,10,212,15,209,20,213,30"/>
-</map>

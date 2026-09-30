@@ -1,9 +1,0 @@
-<map id="idt_load_idt" name="idt_load_idt">
-<area shape="rect" id="Node000001" title="Tells where the IDT table to the CPU." alt="" coords="308,29,405,57"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="380,13,372,10,357,8,342,10,334,14,332,20,335,30,331,28,326,20,330,11,340,5,357,3,374,5,385,14"/>
-<area shape="rect" id="Node000002" href="$kernel_8c.html#a6b8fb674fb359f6ae53dc9c4fb7fc6be" title="The function is the entry point of the kernel. It is calling by the kernel_entry()." alt="" coords="159,29,260,57"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="290,43,260,46,260,41,295,43"/>
-<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="232,13,225,10,209,8,194,10,186,14,184,20,188,30,183,28,179,20,182,11,193,5,209,3,227,5,238,14"/>
-<area shape="rect" id="Node000003" href="$kernel_8c.html#a7cd22eb787a5ddf3e7e861d933428001" title=" " alt="" coords="5,29,111,57"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="140,43,111,46,111,41,145,43"/>
-</map>
