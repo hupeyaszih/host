@@ -17,8 +17,6 @@ struct pmm_e820_entry {
 } __attribute__((packed));
 
 void kernel_main(void) {
-    struct kernel_context context;
-
     vga_clear_screen();
 
     idt_init_idt();
