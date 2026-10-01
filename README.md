@@ -1,6 +1,9 @@
 # HOST (Hupeyaszih OS Technology)
 OS project with immutable and content based memory management.
 
+> [!WARNING]
+>I'm not going to develop this project anymore, because I tested this memory design and it indicated bad results: In the best-case scenario, the RAM usage decreased 98.83%; in the worst-case scenario, the RAM usage increased 200%. I tested in other ways too, but the results are the same. So, the project is finished.
+
 ## Table of Contents
 - [Philosophy and Memory Model](#philosophy-and-memory-model)
 - [Trade-Offs (simply)](#trade-offs-simply)
